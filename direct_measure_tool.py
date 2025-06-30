@@ -38,7 +38,7 @@ def uncertainty_R(nominal_R,tolerance_R):
     nominal_R = nominal value of resistance
     tolerance_R = tolerance (%) value of resistance
 
-    #>>> uncertainty_R(1000,1)
+    >>> uncertainty_R(1000,1)
     5.773502691896258
     """
   
@@ -83,6 +83,7 @@ def correction_accuracy(rng,rng_coeff,rdg,rdg_coeff):
    
 if __name__ ==  "__main__":
     import doctest
+    doctest.testmod()
     print("Measurement Uncertainty Tool")
     text = """
 Insert A key - A evaluation of input measure
@@ -116,4 +117,3 @@ Insert any other key to close the program
                 print(f'uncertainty: {eval_result}')
             else:
                 exit()
-

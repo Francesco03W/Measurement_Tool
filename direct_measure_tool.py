@@ -1,9 +1,7 @@
 import math
 import decimal
 
-#Todo: Per migliorare uso
-# togliere il troncamento dopo la 2a cifra significativa per incertezza
-# togliere il troncamento dei decimali della stima al n° di cifre decimali dell'incertezza
+#Todo: For simpler usage:
 # Riscrivere test per le modifiche
 
 
@@ -40,8 +38,8 @@ def uncertainty_R(nominal_R,tolerance_R):
     nominal_R = nominal value of resistance
     tolerance_R = tolerance (%) value of resistance
 
-    #>>> uncertainty_R(1000,1,1)
-    5.8
+    #>>> uncertainty_R(1000,1)
+    5.773502691896258
     """
   
     nominal_R=int(nominal_R)
@@ -59,8 +57,6 @@ def A_evaluation(values,n):
     uncertainty is esteemd standard deviation of the findings. (esteemd dev)
 
     values = list of values (float values)
-    uncertainty has 2 significant digits
-    esteem has many decimals as the uncertainty when the latter has 2 significant digits.
     """
     n=int(n)
     esteem_V=sum(values)/n
@@ -94,7 +90,6 @@ Insert B key - B evaluation of resistance measure
 Insert C key - B evaluation of measurement accuracy
 Insert any other key to close the program
 """
-    #per chiudere il programma conviene ragionare con logica negata! più elegante
     print(text)
     choice = input("Enter choice: ").lower()
 
